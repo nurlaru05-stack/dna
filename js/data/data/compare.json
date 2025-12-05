@@ -1,5 +1,0 @@
-[
-  { "name": "ИТ", "price": 800000, "scores": 80, "internship": "Да" },
-  { "name": "Экономика", "price": 700000, "scores": 75, "internship": "Да" },
-  { "name": "Инженерия", "price": 850000, "scores": 82, "internship": "Да" }
-]
