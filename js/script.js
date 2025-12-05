@@ -1,11 +1,22 @@
-// Адаптивность и доступность
-document.getElementById("fontIncrease")?.addEventListener("click", () => {
+// Переключение темного/светлого режима
+document.getElementById("contrastToggle")?.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+
+// Увеличение/уменьшение шрифта
+const buttons = {
+  increase: document.getElementById("fontIncrease"),
+  decrease: document.getElementById("fontDecrease")
+};
+
+buttons.increase?.addEventListener("click", () => {
   let currentSize = parseInt(window.getComputedStyle(document.body).fontSize);
   document.body.style.fontSize = currentSize + 2 + "px";
 });
 
-document.getElementById("contrastToggle")?.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+buttons.decrease?.addEventListener("click", () => {
+  let currentSize = parseInt(window.getComputedStyle(document.body).fontSize);
+  document.body.style.fontSize = (currentSize - 2) + "px";
 });
 
 // Загрузка программ
